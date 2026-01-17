@@ -1,27 +1,30 @@
 {
   "expo": {
-    "name": "Enigma Logicistics",
+    "name": "enigma-mobile-app",
     "slug": "enigma-mobile-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "enigma-app",
-    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.enigma.logicistics",
-      "userInterfaceStyle": "dark"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#050505"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       },
-      "package": "com.enigma.logicistics",
-      "userInterfaceStyle": "dark"
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
     },
-    "plugins": [
-      "expo-router"
-    ]
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
   }
 }
