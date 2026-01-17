@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules/
+.vscode
 
 # Expo
 .expo/
@@ -36,8 +37,17 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-app-example
-
 # generated native folders
 /ios
 /android
+
+# Extra
+npm-debug.log
+.env
+Thumbs.db
+
+/build
+yarn-error.log
+.vercel
+.idea
+.eslintcache
