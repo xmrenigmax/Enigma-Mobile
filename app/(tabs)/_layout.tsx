@@ -1,33 +1,52 @@
+/**
+ * @file _layout.tsx
+ * @description Bottom Tab Navigator configuration for Enigma Logicistics.
+ */
+import { COLORS } from '@/constants/Colors';
 import { Tabs } from 'expo-router';
+import { Box, LayoutDashboard, Workflow } from 'lucide-react-native';
 import React from 'react';
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+    <Tabs screenOptions={{
+      tabBarActiveTintColor: COLORS.primary,
+      tabBarInactiveTintColor: COLORS.muted,
+      tabBarStyle: {
+        backgroundColor: COLORS.surface,
+        borderTopColor: COLORS.border,
+        height: 85,
+        paddingBottom: 25,
+        paddingTop: 10,
+      },
+      headerStyle: {
+        backgroundColor: COLORS.background,
+      },
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        color: COLORS.text,
+      },
+      headerShadowVisible: false,
+    }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Command',
+          tabBarIcon: ({ color }) => <LayoutDashboard size={24} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="assets"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Atlas',
+          tabBarIcon: ({ color }) => <Box size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="flows"
+        options={{
+          title: 'Flows',
+          tabBarIcon: ({ color }) => <Workflow size={24} color={color} />,
         }}
       />
     </Tabs>

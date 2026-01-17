@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./src/styles/variables.css";
+
+/* Ensure all utility classes are picked up by NativeWind */
+@source "../app";
+@source "../src";
