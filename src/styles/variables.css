@@ -1,0 +1,28 @@
+/**
+ * @file variables.css
+ * @description Custom theme tokens and Logicistics shortcuts.
+ */
+@theme {
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-primary: #A855F7;
+  --color-secondary: #3B82F6;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-border: #1E293B;
+  --color-muted: #94A3B8;
+}
+
+/* Enigma Functional Shortcuts */
+@utility d-f { @apply flex-row; }
+@utility ai-c { @apply items-center; }
+@utility jc-sb { @apply justify-between; }
+
+@utility dashboard-card {
+  @apply bg-surface border border-border rounded-[32px] p-6 mb-4;
+}
+
+@utility glow-primary {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+  @apply border border-primary/30;
+}

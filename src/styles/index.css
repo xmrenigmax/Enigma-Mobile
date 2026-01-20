@@ -1,0 +1,10 @@
+/**
+ * @file index.css
+ * @description Global entry point for Tailwind and Enigma custom utilities.
+ */
+@import "tailwindcss";
+@import "./variables.css";
+
+/* Ensure we target the PACS structure for NativeWind processing */
+@source "../../app";
+@source "../../src";
